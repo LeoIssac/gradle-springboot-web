@@ -1,0 +1,6 @@
+//父模块名称
+rootProject.name = 'gradle-springboot-web'
+//子模块 core包名称
+include 'gradle-core'
+//子模块 web包名称
+include 'gradle-web'

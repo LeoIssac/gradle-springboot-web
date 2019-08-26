@@ -1,0 +1,11 @@
+/**
+ * 引入 gradle-web依赖
+ */
+dependencies {
+    //引入子模块 gradle-core
+    compile project(':gradle-core')
+    //引入 springboot starter web
+    compile'org.springframework.boot:spring-boot-starter-web'
+    //引入 thymeleaf 模板引擎
+    compile ('org.springframework.boot:spring-boot-starter-thymeleaf')
+}

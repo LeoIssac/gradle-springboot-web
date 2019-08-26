@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 让IDEA编辑器有Thymeleaf语法提示，不写不影响运行 -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息</title>
+</head>
+<body>
+<!--后台控制器输出数据：model.addAttribute("users",users);-->
+<!--List<User> getUserList()，即数据格式为常见的：List<User>-->
+<table border="1">
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>姓名</th>
+        <th>年龄</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- 遍历集合，如果被遍历的变量 users 为 null 或者不存在，则不会进行遍历，也不报错-->
+    <tr th:each="user : ${users}">
+        <td th:text="${user.id}" th:name="${user.id}"></td>
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.age}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

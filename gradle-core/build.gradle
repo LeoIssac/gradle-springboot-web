@@ -1,0 +1,16 @@
+/**
+ * 解决 Execution failed for task ':gradle-core:bootJar 问题
+ * 引入 jar.enabled = true,bootJar.enabled = false
+ */
+jar.enabled = true
+bootJar.enabled = false
+/**
+ * 引入 gradle-core依赖
+ */
+dependencies {
+    //引入springboot starter
+    compile('org.springframework.boot:spring-boot-starter')
+    //引入lombok依赖
+    //@Data注解在类上，会为类的所有属性自动生成setter/getter、equals、canEqual、hashCode、toString方法，如为final属性，则不会为该属性生成setter方法。
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.2'
+}
