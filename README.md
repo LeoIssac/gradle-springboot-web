@@ -1,5 +1,6 @@
 # gradle
-gradle仓库主要记录gradle-idea spring boot 多莫苦熬项目内容。简书地址：
+gradle-idea spring boot 多模块项目编码。
+
 #1.创建 Gradle 父模块
 **1.**`new project`—`Gradle`—选择对应`SDK`—`Next`。
 &emsp;选择gradle项目，自己环境中的SDK（最低版本为JDK1.8），创建父模块。
